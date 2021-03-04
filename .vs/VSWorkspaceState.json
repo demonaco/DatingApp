@@ -2,9 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\API",
+    "\\API\\Controllers",
     "\\API\\Data",
-    "\\API\\obj\\Debug",
-    "\\API\\obj\\Release",
+    "\\API\\Entities",
     "\\API\\Properties"
   ],
   "SelectedNode": "\\API\\API.csproj",
