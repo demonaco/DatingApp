@@ -2028,7 +2028,8 @@
       "Microsoft.EntityFrameworkCore >= 6.0.0-preview.1.21102.2",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.0-preview.1.21102.2",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.0-preview.1.21102.2",
-      "Swashbuckle.AspNetCore >= 5.6.3"
+      "Swashbuckle.AspNetCore >= 5.6.3",
+      "System.IdentityModel.Tokens.Jwt >= 6.8.0"
     ]
   },
   "packageFolders": {
@@ -2087,6 +2088,10 @@
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[5.6.3, )"
+          },
+          "System.IdentityModel.Tokens.Jwt": {
+            "target": "Package",
+            "version": "[6.8.0, )"
           }
         },
         "imports": [
