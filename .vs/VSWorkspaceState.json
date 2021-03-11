@@ -7,6 +7,6 @@
     "\\API\\Entities",
     "\\API\\Properties"
   ],
-  "SelectedNode": "\\API\\API.csproj",
+  "SelectedNode": "\\API\\Controllers\\UsersController.cs",
   "PreviewInSolutionExplorer": false
 }
