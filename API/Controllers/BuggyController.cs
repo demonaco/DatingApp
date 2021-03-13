@@ -1,5 +1,8 @@
 ﻿using System;
-
+using API.Data;
+using API.Entities;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
@@ -31,7 +34,7 @@ namespace API.Controllers
         public ActionResult<string> GetServerError()
         {
 
-             var thing = _contenxt.Users.Find(-1);
+             var thing = _context.Users.Find(-1);
 
              var thingToReturn = thing.ToString();
 
