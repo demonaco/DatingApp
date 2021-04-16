@@ -53,4 +53,4 @@ export class MemberDetailComponent implements OnInit {
     }
   }
 
-}
+
