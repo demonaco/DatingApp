@@ -45,6 +45,8 @@ namespace API.Controllers
 
             var user = await _userManager.FindByNameAsync(username);
 
+            if (user == null) return NotFound("Could not find user");
+
             var userRoles = await _userManager.GetRolesAsync(user);
 
             var result = await _userManager.AddToRolesAsync(user, selectedRoles.Except(userRoles));
@@ -54,6 +56,8 @@ namespace API.Controllers
             result = await _userManager.RemoveFromRolesAsync(user, userRoles.Except(selectedRoles));
 
             if (!result.Succeeded) return BadRequest("Failed to remove from roles");
+
+            return Ok(await _userManager.GetRolesAsync(user));
 
 
         }
