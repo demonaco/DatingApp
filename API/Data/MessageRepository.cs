@@ -118,5 +118,13 @@ namespace API.Data
         {
             _context.Connections.Remove(connection);
         }
+
+        public async Task<Group> GetGroupForConnection(string connectionId)
+        {
+            return await _context.Groups
+                .Include(c => c.Connections)
+                .Where(c => c.Connections.Any(x => x.ConnectionId == connectionId))
+                .FirstOrDefaultAsync();
+        }
     }
 }
