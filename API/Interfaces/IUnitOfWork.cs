@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 
 namespace API.Interfaces
 {
-    interface IUnitOfWork
+    public interface IUnitOfWork
     {
-        IUserRepository UserRepository { get; set; }
-        IMessageRepository MessageRepository { get; set; }
-        ILikesRepository LikesRepository { get; set; }
-        Task<bool> Complete();
-        bool HasChanges();
+       IUserRepository UserRepository { get; set; }
+       IMessageRepository MessageRepository { get; set; }
+       ILikesRepository LikesRepository { get; set; }
+       Task<bool> Complete();
+       bool HasChanges();
     }
 }
