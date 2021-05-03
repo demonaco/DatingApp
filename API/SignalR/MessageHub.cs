@@ -16,7 +16,7 @@ namespace API.SignalR
         private readonly IMapper _mapper;
         private readonly IHubContext<PresenceHub> _presenceHub;
         private readonly PresenceTracker _tracker;
-        private readonly IUnitOfWork _unitOfWork
+        private readonly IUnitOfWork _unitOfWork;
 
         public MessageHub( IMapper mapper, IUnitOfWork unitOfWork, IHubContext<PresenceHub> presenceHub,
             PresenceTracker tracker)
