@@ -49,9 +49,9 @@ namespace API.Data
                 .AsQueryable();
 
             query = messageParams.Container switch {
-                "Inbox" = query.Where(u => u.RecipientUsername == messageParams.Username 
+                "Inbox" => query.Where(u => u.RecipientUsername == messageParams.Username 
                 && u.RecipientDeleted == false),
-                "Outbox" = query.Where(u => u.SenderUsername == messageParams.Username
+                "Outbox" => query.Where(u => u.SenderUsername == messageParams.Username
                 && u.SenderDeleted == false),
                 _ => query.Where(u => u.RecipientUsername == 
                 messageParams.Username && u.RecipientDeleted == false && u.DateRead == null)

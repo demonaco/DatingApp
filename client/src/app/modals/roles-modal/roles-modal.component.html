@@ -12,13 +12,13 @@
             [checked]="role.checked"
             value="role.name"
             (change)="role.checked = !role.checked"
-            [disabled]="role.name === 'Admin' && user.username ==== 'admin'"
+            [disabled]="role.name === 'Admin' && user.username === 'admin'"
             >
             <label>{{role.name}}</label>
        </div>
-   </form>>
+   </form>
 </div>
 <div class="modal-footer">
     <button type="button" class="btn btn-default" (click)="bsModalRef.hide()">Cancel</button>
-    <button type="button" class="btn btn-default" (click)="updateRoles()">Submit</button>
+    <button type="button" class="btn btn-success" (click)="updateRoles()">Submit</button>
 </div>
